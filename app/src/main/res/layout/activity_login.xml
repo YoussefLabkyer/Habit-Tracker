@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:background="@drawable/lab3logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appname"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#1a4d2e"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_journey_to_better_health"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_address"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1a1a1a"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/you_example_com"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1a1a1a"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_page"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/green_dark"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textSize="14sp"
+                android:textColor="#666666"/>
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textSize="14sp"
+                android:textColor="#1a4d2e"
+                android:textStyle="bold"
+                android:clickable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

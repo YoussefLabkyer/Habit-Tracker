@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Reuse the existing dashboard markup by including the original home content:
+         We keep HomeActivity's header and bottom nav in the activity layout,
+         and move the scrollable body into this fragment. -->
+    <include layout="@layout/home_dashboard_content_placeholder" />
+
+</ScrollView>
+
+
+

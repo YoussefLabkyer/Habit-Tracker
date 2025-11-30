@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Stay Consistent"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tvDesc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Small steps lead to big results."
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/succ"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:backgroundTint="@color/btncolor"/>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:backgroundTint="@color/green_dark"/>
+    </LinearLayout>
+</LinearLayout>

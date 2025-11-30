@@ -1,0 +1,145 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">Wellness Companion</string>
+
+    <!-- Loading screen strings -->
+    <string name="loading_message_1">Taking a moment for yourself…</string>
+    <string name="loading_message_2">Preparing your wellness journey…</string>
+    <string name="loading_message_3">Setting positive intentions…</string>
+    <string name="loading_message_4">Creating your personal space…</string>
+
+    <!-- Home screen strings -->
+    <string name="welcome_message">Good morning! Ready to take care of yourself today?</string>
+    <string name="todays_progress">Today\'s Progress</string>
+    <string name="progress_percentage">%d%% completed</string>
+    <string name="quick_actions">Quick Actions</string>
+
+    <!-- Navigation items -->
+    <string name="nav_home">Home</string>
+    <string name="nav_routines">Routines</string>
+    <string name="nav_stats">Statistics</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Quick action items -->
+    <string name="action_meditation">Meditation</string>
+    <string name="action_water">Water Intake</string>
+    <string name="action_exercise">Exercise</string>
+    <string name="action_sleep">Sleep Tracking</string>
+    <string name="action_nutrition">Nutrition</string>
+    <string name="action_mindfulness">Mindfulness</string>
+
+    <!-- Common strings -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="continue_text">Continue</string>
+
+    <!-- Time-related strings -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+
+    <!-- Motivation quotes -->
+    <string name="quote_1">"Self-care is giving the world the best of you, not what\'s left of you."</string>
+    <string name="quote_2">"The greatest wealth is health."</string>
+    <string name="quote_3">"Small daily improvements are the key to staggering long-term results."</string>
+    <string name="quote_4">"Your body hears everything your mind says."</string>
+
+    <!-- Notification strings -->
+    <string name="notification_channel_name">Wellness Reminders</string>
+    <string name="notification_channel_description">Reminders for your wellness activities</string>
+    <string name="hydration_reminder">Time to hydrate! Your body needs water.</string>
+    <string name="meditation_reminder">Take a moment to breathe and center yourself.</string>
+    <string name="movement_reminder">Time to move your body!</string>
+
+    <!-- Error messages -->
+    <string name="error_general">Something went wrong. Please try again.</string>
+    <string name="error_network">No internet connection. Please check your network settings.</string>
+    <string name="error_empty_field">This field cannot be empty.</string>
+
+    <!-- Success messages -->
+    <string name="success_routine_saved">Routine saved successfully!</string>
+    <string name="success_goal_achieved">Congratulations! You achieved your goal.</string>
+
+    <!-- Format strings -->
+    <string name="format_minutes">%d min</string>
+    <string name="format_glasses">%d glasses</string>
+    <string name="format_hours_slept">%d hours slept</string>
+    <string name="heading">Wellness Tracker</string>
+    <string name="subheadding">Your daily health companion</string>
+    <string name="loadmessg">Loading...</string>
+    <string name="lg_water">Log Water</string>
+    <string name="back">Back</string>
+
+    <!-- Onboarding Screens -->
+    <string name="onboarding1_title">Welcome to Wellness</string>
+    <string name="onboarding1_desc">Track your daily habits easily.</string>
+    <string name="onboarding2_title">Monitor Progress</string>
+    <string name="onboarding2_desc">See trends and stay motivated.</string>
+    <string name="onboarding3_title">Stay Consistent</string>
+    <string name="onboarding3_desc">Small steps lead to big results.</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_get_started">Get Started</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Wellness</string>
+    <string name="login_tagline">Your journey to better health</string>
+    <string name="email_address">Email address</string>
+    <string name="email_hint">you@example.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="btn_login">Log in</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+
+    <!-- Create Account Screen -->
+    <string name="create_account_title">Create Account</string>
+    <string name="create_account_subtitle">Start your wellness journey today</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="full_name_hint">John Doe</string>
+    <string name="btn_create_account">CREATE ACCOUNT</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+
+    <!-- Validation Messages -->
+    <string name="error_fill_all_fields">Please fill all fields</string>
+    <string name="error_password_length">Password must be at least 8 characters</string>
+    <string name="error_passwords_not_match">Passwords do not match</string>
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="success_account_created">Account created successfully!</string>
+    <string name="success_login">Login successful!</string>
+
+    <!-- Account Screen -->
+    <string name="account_details">Account Details</string>
+    <string name="btn_save_changes">Save Changes</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="sign_out_message">Are you sure you want to sign out?</string>
+    <string name="success_profile_updated">Profile updated successfully!</string>
+
+    <!-- Water Reminder -->
+    <string name="water_reminder_title">Water Reminder</string>
+    <string name="btn_set_reminder">Set Reminder</string>
+    <string name="water_notification_title">💧 Time to Drink Water!</string>
+    <string name="water_notification_text">Stay hydrated! Drink a glass of water.</string>
+    <string name="appname">Wellness Tracker</string>
+    <string name="your_journey_to_better_health">Your journey to better health</string>
+    <string name="login_page">Log in</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="you_example_com">you@example.com</string>
+    <string name="create_account">Create Account</string>
+    <string name="start_your_wellness_journey_today">Start your wellness journey today</string>
+    <string name="john_doe">John Doe</string>
+    <string name="john_example_com">john@example.com</string>
+    <string name="create_a_strong_password">Create a strong password</string>
+    <string name="warning">• At least 8 characters</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="re_enter_your_password">Re-enter your password</string>
+    <string name="create_account_btn">CREATE ACCOUNT</string>
+    <string name="select_time_e_g_3_30_pm">Select Time (e.g., 3:30 PM)</string>
+    <string name="water_intake">Water Intake</string>
+    <string name="stay_hydrated_stay_healthy">Stay hydrated, stay healthy</string>
+</resources>

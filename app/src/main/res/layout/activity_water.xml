@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="24dp"
+        android:layout_margin="0dp"
+        android:dividerPadding="0dp"
+        android:foregroundGravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:scrollbarTrackVertical="@android:color/transparent"
+        android:backgroundTintMode="src_over"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:elevation="2dp"
+        android:outlineProvider="bounds"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:baselineAligned="false"
+        android:fitsSystemWindows="false"
+        android:keepScreenOn="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:saveEnabled="true"
+        android:visibility="visible"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollIndicators="right">
+
+        <Button
+            android:id="@+id/backHome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#121212"
+            android:paddingTop="8dp"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#1A1818" />
+
+        <!-- Hidden legacy label used by existing code; kept to preserve compatibility -->
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water: 0 / 8 glasses (0%)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp"
+                android:text="💧 Water Tracker"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHeaderSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/stay_hydrated_stay_healthy"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Progress Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- Big numeric in center (simulating ring center) -->
+            <TextView
+                android:id="@+id/tvCurrentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#22c55e"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goal"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvGoalBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textColor="@color/green_dark"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="glasses"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Backing linear progress to reflect percentage -->
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:progressTint="@color/green_light"
+                android:progressBackgroundTint="@color/black"
+                android:indeterminateOnly="false"/>
+
+            <!-- Goal info row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:weightSum="3"
+                android:radius="12dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Goal" android:textColor="#888888" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tvDailyGoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remaining" android:textColor="#888888" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tvRemaining" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Progress" android:textColor="#888888" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tvProgressPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:textColor="#22c55e" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Quick Add -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quick Add" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+                <Button android:id="@+id/btnQuick1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="+1 Glass" android:backgroundTint="@color/green_light" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/btnQuick2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="+2 Glasses" android:backgroundTint="@color/green_light" android:textColor="#FFFFFF" android:layout_marginLeft="8dp"/>
+                <Button android:id="@+id/btnQuick3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="+3 Glasses" android:backgroundTint="@color/green_light" android:textColor="#FFFFFF" android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <!-- Custom Amount -->
+            <Button
+                android:id="@+id/btnAddSingle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textColor="#000000"
+                android:backgroundTint="@color/green_dark"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom Amount" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/etCustomAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#EFEDED"
+                    android:backgroundTint="#F4F2F2"
+                    android:hint="Enter glasses"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </LinearLayout>
+
+            <!-- Settings row: Set Goal and Reset Day -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+                <Button android:id="@+id/btnSetGoal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Set Goal" android:backgroundTint="#2a2a2a" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/resetBtn" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Reset Day" android:backgroundTint="#dc2626" android:textColor="#FFFFFF" android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Reminder Section -->
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="Water Reminder" 
+            android:textColor="#FFFFFF" 
+            android:textSize="14sp" 
+            android:textStyle="bold" 
+            android:layout_marginTop="20dp"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginTop="12dp">
+            
+            <TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="Set daily reminder time" 
+                android:textColor="#888888" 
+                android:textSize="12sp"/>
+            
+            <Button
+                android:id="@+id/btnSelectTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_time_e_g_3_30_pm"
+                android:backgroundTint="#D1D1D1"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"/>
+            
+            <Button
+                android:id="@+id/btnSetReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Reminder"
+                android:backgroundTint="#22c55e"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <!-- Weekly Bar Chart -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This Week" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:id="@+id/weeklyChart"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_marginTop="12dp">
+            <!-- 7 bars Mon..Sun -->
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar0" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar1" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar2" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wed" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar3" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thu" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar4" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar5" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sat" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="bottom">
+                <View android:id="@+id/bar6" android:layout_width="match_parent" android:layout_height="0dp" android:background="#22c55e" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sun" android:textColor="#888888" android:textSize="12sp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

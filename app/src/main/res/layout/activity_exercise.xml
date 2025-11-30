@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/backbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="#121212"
+            android:paddingTop="6dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#1A1818" />
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="40dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Habits &amp; Exercises"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track your daily wellness routines and build healthy habits"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="32dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:padding="20dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvTotalHabits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#22c55e"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Habits"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:padding="20dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvCompletedToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#22c55e"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed Today"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:padding="20dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvStreakCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#22c55e"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day Streak"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add Habit Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f9f9f9"
+            android:padding="24dp"
+            android:layout_marginBottom="32dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Habit or Exercise"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habit Name"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/etHabitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g., Morning Yoga, 30-min Walk"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                android:background="#ffffff"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description (Optional)"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/etHabitDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Add notes or details about this habit..."
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                android:background="#ffffff"
+                android:padding="12dp"
+                android:gravity="top"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnAddHabit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Habit"
+                android:textColor="#ffffff"
+                android:backgroundTint="#22c55e"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- My Habits -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Habits"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/habitsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Habits will be added here dynamically -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
